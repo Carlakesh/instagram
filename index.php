@@ -5,15 +5,29 @@ ini_set('default_socket_timeout', 300);
 session_start();
 //make constants using define.
 
-define('client_id', '8ff07ece43184a1981567fa73fe626c6');
-define('client_secret', 'b473eeea0b584196a84352e8e31b38be');
+define('clientID', '8ff07ece43184a1981567fa73fe626c6');
+define('client_Secret', 'b473eeea0b584196a84352e8e31b38be');
 define('redirectURI', 'http://localhost/instagrampage/index.php');
 define('ImageDirectory', 'pics/');
 ?>
 
 
-<!--- CLIENT INFO
-CLIENT ID	8ff07ece43184a1981567fa73fe626c6
-CLIENT SECRET	b473eeea0b584196a84352e8e31b38be
-WEBSITE URL	http://localhost/instagrampage/index.php
-REDIRECT URI	http://localhost/instagrampage/index.php --> 
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Untitled</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="author" href="humans.txt">
+</head>
+<body>
+	<!-- Creating a login for people to go and give approval for our web app to access their Instagram Account
+	After getting approval we are now going to have the info so that we can play with it.
+	 -->
+	<a href="https:api.instagram/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code"> LOGIN</a>
+<script src="js/main.js"></script>
+</body>
+</html>
