@@ -39,7 +39,7 @@ if (isset($_GET['code'])) {
 	<!-- Creating a login for people to go and give approval for our web app to access their Instagram Account
 	After getting approval we are now going to have the info so that we can play with it.
 	 -->
-	<a href="https:api.instagram.com/oauth.authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code/">LOGIN</a>
+	<a href="https:api.instagram.com/oauth/authorize/?client_id=<?php echo clientID; ?>&redirect_uri=<?php echo redirectURI; ?>&response_type=code">LOGIN</a>
 <script src="js/main.js"></script>
 </body>
 </html>
