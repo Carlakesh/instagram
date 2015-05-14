@@ -28,7 +28,12 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); //but in live work-production
 
 
 $result = curl_exec($curl);
-curl_close();
+curl_close($curl);
+
+$results = json_decode($result, true);
+echo $results['user']['username'];
+}
+else {
 ?>
 
 
@@ -51,3 +56,6 @@ curl_close();
 <script src="js/main.js"></script>
 </body>
 </html>
+<?php
+}
+?>
