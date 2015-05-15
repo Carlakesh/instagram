@@ -41,10 +41,22 @@ function getUserID($userName){
 		foreach ($results['data'] as $items){
 			// going to go through all of my results and give myself back the url of those pictures because we want to save it in the PHP server
 			$image_url = $items['images']['low_resolution']['url'];
-			echo '<img src=" ' .$image_url. ' "/><br/>';
+			echo '<img src=" '.$image_url.' "/><br/>';
+			// calling a function to save that $image_url
+			savePictures($image_url);
+			}
 		}
+	//function to save image to server
+	function savePictures($image_url){
+echo $image_url .'<br>';
+	$filename = basename($image_url);// the filename is what we are storing. Basename is the PHP bult in the method that we ere using to store $image_url
+		echo $filename . '<br>';
+		
+		// making sure that the image doesnt exist in the storage
+		$destination = ImageDirectory . $filename;
+		// goes and grabs an imagefile and stores it into our server 
+		file_put_contents($destination, file_get_contents($image_url));
 	}
-
 if (isset($_GET['code'])) {
 	$code = ($_GET['code']);
 	$url = 'https://api.instagram.com/oauth/access_token';
