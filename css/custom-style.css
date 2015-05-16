@@ -1,0 +1,17 @@
+.navbar-fixed-top{
+background-image: url("../images/pink.jpg");
+height: 80px;
+}
+.navbar{
+	
+	 background-color: blue;
+	font-family: 'Salsa', cursive;
+	font-size: 20px;
+
+}
+
+a {
+	color: black;
+	font-size: 18px;
+}
+
