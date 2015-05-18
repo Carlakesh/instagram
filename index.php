@@ -60,9 +60,12 @@ define('ImageDirectory', 'pics/');
 	}
 	// function to save images to server 
 	function savePictures($image_url){
-		echo $image_url .'<br>';
+		//echo $image_url .'<br>';
+		echo "&#10084;" ."&#10084;" . "&#10084;" . "&#10084;". '<br>';
+
 		$filename = basename($image_url);// the filename is what we are storing. Basename is the PHP bult in the method that we ere using to store $image_url
-		echo $filename . '<br>';
+		//echo $filename . '<br>';
+
 		
 		// making sure that the image doesnt exist in the storage
 		$destination = ImageDirectory . $filename;
